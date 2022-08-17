@@ -9,3 +9,5 @@ b<- as.data.frame(id)
 #Export my data frame
 write.table(id, file = "List_final_ids.csv", sep = ",", col.names = NA,
             qmethod = "double")
+##Hola soy Lina aprendiendo a usar GitHUb##
+#Insumos: datos publicos de prueba#
