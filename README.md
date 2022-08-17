@@ -11,7 +11,3 @@ Script para obtener LSID de listas de especies consultando dos fuentes (ncbi y t
 # Licencia
 
 MIT
-
-# Insumos
-
-Los datos públicos de prueba se encuentran en esta [ubicación](htpps://google.com)
