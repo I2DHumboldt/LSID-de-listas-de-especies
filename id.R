@@ -27,18 +27,16 @@ write.table(idfinal, file = "List_final.csv", sep = ",", col.names = NA,
 # Abrir libreria
 library(taxize)
 #Abro espacio de trabajo
-setwd("C:/Users/juan.rey/Desktop")
+setwd("~/miruta")
 # Abro archivo de trabajo wuuu
-id <- read.csv("lsid_test.csv"u, head=TRUE, sep=";")
+id <- read.csv("misdatos.csv", fileEncoding = "UTF-8")
 #Ejecutar el siguiente codigo para obtener ID de Tropicos for taxonomic names
-spnames <- as.factor(id$scientificName)
+spnames <- as.character(id$scientificName)
 class(spnames)
 sp = as.number(spnames)
 test1<-get_ids(spnames, db=c("gbif"), rows=1, verbose=TRUE)
 idfinal1<-data.frame(cbind(test1$gbif))
-as<-paste("itis.gov:servlet:SingleRpt:SingleRpt?search_topic=TSN&search_value=", idfinal1$cbind.test1.itis. ,
-          ifelse(is.na(idfinal1$cbind.test1.itis.), "No found", idfinal1$cbind.test1.itis.), sep="")
-a<- data.frame(idfinal1, as)
-# Exporta tabla de ID
-write.table(a, file = "List_final.csv", sep = ",", col.names = NA,
-            qmethod = "double")
+idfin<- data.frame(species=row.names(idfinal1), idfinal1, row.names=NULL, check.names=FALSE)
+idfin$cbind.test1.gbif.
+as<-paste("gbif.org:species:", idfin$cbind.test1.gbif. ,sep="")
+a<- data.frame(idfin, as)
