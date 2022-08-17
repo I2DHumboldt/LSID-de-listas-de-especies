@@ -6,11 +6,12 @@
 library(taxize)
 #Abro espacio de trabajo
 setwd("~/miruta")
-# Abro archivo de trabajo
+# Abro archivo de trabajo wuuu
 id <- read.csv("misdatos.csv", fileEncoding = "UTF-8")
 #Ejecutar el siguiente codigo para obtener ID de Tropicos for taxonomic names
 spnames <- as.character(id$scientificName)
 class(spnames)
+sp = as.number(spnames)
 test1<-get_ids(spnames, db=c("gbif"), rows=1, verbose=TRUE)
 idfinal1<-data.frame(cbind(test1$gbif))
 idfin<- data.frame(species=row.names(idfinal1), idfinal1, row.names=NULL, check.names=FALSE)
