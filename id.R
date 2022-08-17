@@ -28,11 +28,12 @@ write.table(idfinal, file = "List_final.csv", sep = ",", col.names = NA,
 library(taxize)
 #Abro espacio de trabajo
 setwd("C:/Users/juan.rey/Desktop")
-# Abro archivo de trabajo
-id <- read.csv("lsid_test.csv", head=TRUE, sep=";")
+# Abro archivo de trabajo wuuu
+id <- read.csv("lsid_test.csv"u, head=TRUE, sep=";")
 #Ejecutar el siguiente codigo para obtener ID de Tropicos for taxonomic names
 spnames <- as.factor(id$scientificName)
 class(spnames)
+sp = as.number(spnames)
 test1<-get_ids(spnames, db=c("gbif"), rows=1, verbose=TRUE)
 idfinal1<-data.frame(cbind(test1$gbif))
 as<-paste("itis.gov:servlet:SingleRpt:SingleRpt?search_topic=TSN&search_value=", idfinal1$cbind.test1.itis. ,
